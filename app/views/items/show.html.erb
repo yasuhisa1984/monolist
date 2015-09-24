@@ -13,19 +13,24 @@
       </div>
       <%= render 'action' , item: @item %>
     </div>
+    
     <div class="item-single-side">
       <div class="side-box">
         <h4 class="side-box-title">Haveしたユーザー</h4>
         <div class="side-box-body">
           <% # TODO Haveしたユーザー一覧 %>
-           <%= @item.have_users.count %>
+            <% @have_users.each do |have_users| %>
+            <%= link_to gravatar_for(have_users, :size => 25) ,user_path(have_users) %>
+            <% end %>
         </div>
       </div>
       <div class="side-box">
         <h4 class="side-box-title">Wantしたユーザー</h4>
         <div class="side-box-body">
           <% # TODO Wantしたユーザー一覧 %>
-           <%= @item.want_users.count %>
+            <% @want_users.each do |want_users| %>
+            <%= link_to gravatar_for(want_users, :size => 25) ,user_path(want_users) %>
+            <% end %>
         </div>
       </div>
       <div class="text-center">

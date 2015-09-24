@@ -1,3 +1,4 @@
+<% content_for :title, "About" %>
 <div class="user-profile">
   <div class="icon">
     <%= gravatar_for user, size: 100 %>
@@ -32,7 +33,6 @@
         </div>
       </li>
     </ul>
-
     <%= render 'follow_form' if logged_in? && @user != current_user %>
   </div>
 </div>
