@@ -22,16 +22,16 @@
       <li>
         <div class="status-label">WANT</div>
         <div id="want_count" class="status-value">
-          <%= current_user.want_items.count %>
+          <%= user.want_items.count %>
         </div>
       </li>
       <li>
         <div class="status-label">HAVE</div>
         <div id="have_count" class="status-value">
-          <%= current_user.have_items.count %>
+          <%= user.have_items.count %>
         </div>
       </li>
     </ul>
     <%= render 'follow_form' if logged_in? && @user != current_user %>
   </div>
-</div>
+</div> 
