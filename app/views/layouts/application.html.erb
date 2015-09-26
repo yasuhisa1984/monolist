@@ -3,6 +3,8 @@
 <head>
   <% if content_for?(:header) %>
     <%= yield :header %>
+  <% elsif content_for(:items) %>
+    <%= yield :items %>
   <% else %>
     <title>Monolist</title>
   <% end %>
