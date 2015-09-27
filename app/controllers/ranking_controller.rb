@@ -4,8 +4,6 @@ class RankingController < ApplicationController
   
     #findでidsを取得（この状態では並べ替え未完成）。itemのidをindexでidsに合致させ出力し、並べ替え。
     @items = Item.find(ids).sort_by{|i| ids.index(i.id)}
-    
-    #itemのID番号
     @counts = ids
   end
 
